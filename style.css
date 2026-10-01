@@ -1,0 +1,55 @@
+:root{
+  --ink:#18232f; --muted:#667085; --paper:#fffdf8; --cream:#f5efe2;
+  --accent:#9a6b32; --accent2:#d9b77a; --line:#e6dccb; --dark:#16202a;
+  --success:#2f7d59; --shadow:0 18px 50px rgba(40,30,15,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+button{font:inherit;cursor:pointer}
+.hero{min-height:92vh;background:
+linear-gradient(135deg,rgba(22,32,42,.96),rgba(48,39,27,.90)),
+radial-gradient(circle at 80% 20%,#c69b58 0,transparent 28%);
+color:#fff;display:flex;align-items:center;padding:48px 7%}
+.hero-inner{max-width:1100px;margin:auto;width:100%}
+.eyebrow{letter-spacing:.16em;text-transform:uppercase;color:#e4c88f;font-size:13px;font-weight:700}
+h1{font-family:Georgia,serif;font-size:clamp(42px,7vw,82px);line-height:1.02;margin:18px 0}
+.hero p{max-width:760px;font-size:20px;color:#e6e8eb}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{border:0;border-radius:14px;padding:13px 20px;font-weight:700}
+.btn-primary{background:#e0bb78;color:#17212a}.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3)}
+.container{max-width:1180px;margin:auto;padding:80px 24px}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}
+.section-head h2{font-family:Georgia,serif;font-size:42px;margin:0}
+.section-head p{color:var(--muted);max-width:560px}
+.code-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.code-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.code-card .num{font-size:13px;color:var(--accent);font-weight:800}
+.code-card h3{margin:10px 0 4px;font-family:Georgia,serif}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{border:1px solid var(--line);border-radius:18px;background:#fff;padding:20px;transition:.2s}
+.step:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.step.active{border-color:var(--accent);box-shadow:0 0 0 3px rgba(154,107,50,.10)}
+.step-num{display:inline-flex;width:34px;height:34px;border-radius:50%;align-items:center;justify-content:center;background:var(--cream);color:var(--accent);font-weight:800}
+.step h3{margin:12px 0 6px}.step p{margin:0;color:var(--muted);font-size:14px}
+.demo{background:var(--dark);color:#fff;border-radius:30px;padding:36px;box-shadow:var(--shadow)}
+.demo-top{display:flex;justify-content:space-between;gap:20px;align-items:start}
+.demo h2{font-family:Georgia,serif;font-size:38px;margin:0}
+.progress{height:7px;background:#33404c;border-radius:10px;margin:25px 0}
+.progress span{display:block;height:100%;background:#d9b77a;border-radius:10px;width:8.33%;transition:.3s}
+.demo-card{background:#fff;color:var(--ink);border-radius:20px;padding:28px;margin-top:22px}
+.choice{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:13px;padding:14px;margin:10px 0}
+.choice:hover{border-color:var(--accent);background:#faf5ec}
+.choice.correct{border-color:var(--success);background:#edf8f1}
+.result{font-weight:800;margin-top:16px}
+.quiz-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.quiz-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px}
+.field{margin:12px 0}.field label{display:block;font-weight:700;margin-bottom:6px}
+input,textarea,select{width:100%;padding:12px;border:1px solid #d8d0c3;border-radius:12px;background:#fff;font:inherit}
+textarea{min-height:120px;resize:vertical}
+footer{background:#111a22;color:#d9dee3;padding:45px 24px;text-align:center}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:10}
+.modal.open{display:flex}.modal-box{background:#fff;max-width:700px;width:100%;border-radius:22px;padding:28px;max-height:90vh;overflow:auto}
+.close{float:right;border:0;background:#eee;border-radius:50%;width:36px;height:36px}
+@media(max-width:850px){.code-grid{grid-template-columns:1fr 1fr}.timeline,.quiz-grid{grid-template-columns:1fr}.section-head{display:block}.hero{min-height:auto;padding:90px 7%}}
+@media(max-width:520px){.code-grid{grid-template-columns:1fr}.container{padding:55px 18px}.demo{padding:22px}}
